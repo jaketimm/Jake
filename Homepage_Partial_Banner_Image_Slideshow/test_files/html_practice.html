@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jake's Fake Photography</title>
+  <style>
+    /* Main styling for the page */
+    body {
+      background-color: black;
+      /* Set background color*/
+      color: rgb(170, 204, 255);
+      /* Set text color to white */
+      font-family: Arial, sans-serif;
+      /* Optional: Set font family */
+      margin: 0;
+      /* Remove default margin */
+      padding: 0;
+      /* Remove default padding */
+    }
+
+    /* Styling for the header */
+    header {
+      background-color: #2b2b40;
+      /* Dark background color */
+      color: rgb(170, 204, 255);
+      /* Text color */
+      padding: 10px 20px;
+      /* Padding for content */
+      text-align: center;
+      /* Center-align content */
+    }
+
+    /* Styling for link buttons */
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .button-container a {
+      text-decoration: none;
+      color: rgb(170, 204, 255);
+      background-color: #4d4d74;
+      /* Background color */
+      padding: 10px 20px;
+      /* Padding for button */
+      margin: 0 10px;
+      /* Margin between buttons */
+      border-radius: 5px;
+      /* Rounded corners */
+      font-weight: bold;
+      /* Bold text */
+      transition: background-color 0.3s ease;
+      /* Smooth background color transition */
+    }
+
+    .button-container a:hover {
+      background-color: #5b5b87;
+      /* Lighter on hover */
+    }
+
+    /* Banner at top of page */
+    .banner {
+      background-color: #2b2b40;
+      color: rgb(170, 204, 255);
+      /*Text Color */
+      padding: 10px 20px;
+      /* Padding inside the banner */
+      text-align: center;
+      /* Center-align text */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="banner">
+    <h2>Jake's Fake Photography!</h2>
+    <p>Not a real Business :p</p>
+  </div>
+
+  <!-- Link buttons -->
+  <div class="button-container">
+    <a href="#section1">Button 1</a>
+    <a href="#section2">Button 2</a>
+    <a href="#section3">Button 3</a>
+  </div>
+
+  <style>
+    /* Basic styling for the slideshow container and images */
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+    }
+
+    /* Ensure images maintain aspect ratio */
+    .mySlides img {
+      width: 100%;
+      height: auto;
+    }
+
+
+    /* Styling for navigation buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent background */
+      text-decoration: none;
+      border: none;
+      /* Remove default button border */
+      outline: none;
+      /* Remove default button outline */
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* Styling for image captions */
+    .caption-container {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="duck.jpg" width="800" height="500">
+      </div>
+
+      <div class="mySlides">
+        <img src="football.jpg" width="800" height="500">
+      </div>
+
+      <div class="mySlides">
+        <img src="grayscale-image.png" width="800" height="500">
+      </div>
+
+      <!-- Navigation buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094; </a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+
+    <script>
+      // JavaScript for slideshow functionality
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+
+    <!-- Content sections (placeholders) -->
+    <div id="section1" style="height: 600px; background-color: #222233;">
+      <h2>Section 1</h2>
+      <p>Content of section 1 goes here...</p>
+    </div>
+
+    <div id="section2" style="height: 600px; background-color: #222233;">
+      <h2>Section 2</h2>
+      <p>Content of section 2 goes here...</p>
+    </div>
+
+    <div id="section3" style="height: 600px; background-color: #222233;">
+      <h2>Section 3</h2>
+      <p>Content of section 3 goes here...</p>
+    </div>
+
+  </body>
+
+</html>
